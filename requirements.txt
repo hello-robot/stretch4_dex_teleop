@@ -1,0 +1,16 @@
+numba
+urchin
+python3-xlib
+pyusb
+opencv-contrib-python
+scipy
+six
+jupyter
+filelock
+pyserial
+transforms3d
+
+# The robot's own library. It brings in stretch4_urdf, which
+# generate_ik_urdfs.py needs, and pins opencv-contrib-python down to the 4.x
+# that the rest of the robot software expects.
+hello-robot-stretch4-body

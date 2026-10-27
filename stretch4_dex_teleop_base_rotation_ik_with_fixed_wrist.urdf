@@ -1,0 +1,1086 @@
+<?xml version='1.0' encoding='ASCII'?>
+<robot name="stretch">
+  <link name="base_footprint">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.000438848617413435 -0.00177714671567261 0.0964683686997768" rpy="0.0 -0.0 0.0"/>
+      <mass value="18.9261039673325"/>
+      <inertia ixx="0.214992663147159" ixy="0.00083386140340347" ixz="-0.000588720101362878" iyy="0.22301041696344" iyz="-0.00155067556464412" izz="0.327845792807285"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/base_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="base_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/base_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="line_sensor_5_link">
+    <inertial>
+      <origin xyz="0.00114502070313141 -0.000126774756058545 0.0119761602719026" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346436"/>
+      <inertia ixx="2.88698160050487e-07" ixy="-5.64135957062421e-10" ixz="-7.07831726662328e-09" iyy="2.34959277592962e-07" iyz="-2.73972720709966e-10" izz="6.64615782289848e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_5_optical_link"/>
+  <link name="line_sensor_4_link">
+    <inertial>
+      <origin xyz="0.00114502070313144 -0.000126774756058601 0.0119761602719027" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346436"/>
+      <inertia ixx="2.88698160050488e-07" ixy="-5.64135957060042e-10" ixz="-7.07831726662323e-09" iyy="2.34959277592962e-07" iyz="-2.73972720708353e-10" izz="6.6461578228985e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_4_optical_link"/>
+  <link name="line_sensor_3_link">
+    <inertial>
+      <origin xyz="0.00114502070313158 -0.000126774756058573 0.0119761602719024" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346444"/>
+      <inertia ixx="2.88698160050477e-07" ixy="-5.64135957061257e-10" ixz="-7.07831726660265e-09" iyy="2.34959277592965e-07" iyz="-2.73972720709266e-10" izz="6.64615782289998e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_3_optical_link"/>
+  <link name="line_sensor_2_link">
+    <inertial>
+      <origin xyz="0.00114502070313144 -0.000126774756058518 0.0119761602719027" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346437"/>
+      <inertia ixx="2.88698160050489e-07" ixy="-5.64135957062399e-10" ixz="-7.07831726662342e-09" iyy="2.34959277592963e-07" iyz="-2.73972720710027e-10" izz="6.64615782289852e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_2_optical_link"/>
+  <link name="line_sensor_1_link">
+    <inertial>
+      <origin xyz="0.00114502070313141 -0.000126774756058601 0.0119761602719027" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346436"/>
+      <inertia ixx="2.88698160050487e-07" ixy="-5.64135957060014e-10" ixz="-7.0783172666233e-09" iyy="2.34959277592961e-07" iyz="-2.73972720708438e-10" izz="6.64615782289849e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_1_optical_link"/>
+  <link name="line_sensor_0_link">
+    <inertial>
+      <origin xyz="0.00114502070313158 -0.000126774756058566 0.0119761602719025" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00213836003346444"/>
+      <inertia ixx="2.88698160050477e-07" ixy="-5.64135957061259e-10" ixz="-7.07831726660262e-09" iyy="2.34959277592965e-07" iyz="-2.73972720709195e-10" izz="6.6461578229e-08"/>
+    </inertial>
+  </link>
+  <link name="line_sensor_0_optical_link"/>
+  <link name="head_link">
+    <inertial>
+      <origin xyz="0.0578831450711746 0.0985910072575783 -0.0270263437535101" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.61843540939406"/>
+      <inertia ixx="0.038273162260088" ixy="0.000202623770136025" ixz="0.000231642210610366" iyy="0.030632670593406" iyz="5.61616115268112e-05" izz="0.06400207843788"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/head_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="head_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/head_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lidar_right_link">
+    <inertial>
+      <origin xyz="0.0766909452916593 0.0306840664060523 -0.123358114205567" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.62562935738041"/>
+      <inertia ixx="0.0492829863501233" ixy="-0.0015644794553125" ixz="0.0149316959819942" iyy="0.0349356509390749" iyz="0.00380036135309891" izz="0.0486907192779151"/>
+    </inertial>
+  </link>
+  <link name="lidar_left_link">
+    <inertial>
+      <origin xyz="-0.0761200642618001 0.0298724095594048 -0.122718664995054" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.62562935738041"/>
+      <inertia ixx="0.0495631508318921" ixy="0.00150375867091917" ixz="-0.0147241234604212" iyy="0.034541985578385" iyz="0.00388339874636519" izz="0.0488042201568361"/>
+    </inertial>
+  </link>
+  <link name="camera_right_link">
+    <inertial>
+      <origin xyz="-0.0693850700494765 -0.0909126816993031 -0.0755902514887177" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.62562935738041"/>
+      <inertia ixx="0.0518045670378195" ixy="-0.0128492794593393" ixz="-9.71150764633997e-05" iyy="0.0504717539658347" iyz="-0.000186491771284797" izz="0.0306330355634591"/>
+    </inertial>
+  </link>
+  <link name="camera_right_optical_link"/>
+  <link name="camera_left_link">
+    <inertial>
+      <origin xyz="-0.0693850700494769 0.0909126816993033 -0.0744097485112792" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.62562935738041"/>
+      <inertia ixx="0.0518045670378195" ixy="0.0128492794593393" ixz="9.71150764634412e-05" iyy="0.0504717539658347" iyz="-0.000186491771284767" izz="0.0306330355634591"/>
+    </inertial>
+  </link>
+  <link name="camera_left_optical_link"/>
+  <link name="camera_center_link">
+    <inertial>
+      <origin xyz="-0.0958729354978766 0.0709239731668887 0.000590251488720675" rpy="0.0 -0.0 0.0"/>
+      <mass value="5.62562935738041"/>
+      <inertia ixx="0.0465206803724917" ixy="0.0120094528414331" ixz="0.000133766698529184" iyy="0.0557556406311624" iyz="-0.000162225118887392" izz="0.0306330355634591"/>
+    </inertial>
+  </link>
+  <link name="camera_center_optical_link"/>
+  <link name="mast_link">
+    <inertial>
+      <origin xyz="2.77555756156289e-17 -0.00165282700965368 0.815" rpy="0.0 -0.0 0.0"/>
+      <mass value="10.8924861076487"/>
+      <inertia ixx="1.96276319417158" ixy="-4.74739862687269e-18" ixz="-1.24526930733894e-16" iyy="1.96594229514087" iyz="-1.7420761023809e-18" izz="0.00577661764276332"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/mast_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="mast_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/mast_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lift_link">
+    <inertial>
+      <origin xyz="-0.0233092431932026 0.0564207351004435 0.00671885423980972" rpy="0.0 -0.0 0.0"/>
+      <mass value="2.73451670567963"/>
+      <inertia ixx="0.011466385458167" ixy="0.000875437380496019" ixz="0.000164784751492084" iyy="0.00956613602133992" iyz="-0.00101918054718662" izz="0.0132435850196122"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/lift_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/lift_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_l0_link">
+    <inertial>
+      <origin xyz="0.0737362170199923 -1.74714644470479e-16 0.0021642403308329" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.218976940986966"/>
+      <inertia ixx="0.000273560964842063" ixy="-6.26647189332688e-19" ixz="1.37030578374227e-10" iyy="0.000708760302803403" iyz="-8.66022937939828e-20" izz="0.000740563433273204"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l0_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l0_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_l1_link">
+    <inertial>
+      <origin xyz="0.0983194277508772 -4.84141562609803e-17 0.00214616065125611" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.211728696447344"/>
+      <inertia ixx="0.000227675228746485" ixy="1.74505747014533e-19" ixz="1.46222263149901e-10" iyy="0.000730798627565317" iyz="1.04945328084606e-20" izz="0.000759408092665037"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l1_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="arm_l1_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l1_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_l2_link">
+    <inertial>
+      <origin xyz="0.126544808120785 -4.72555604260908e-17 0.00212532899607004" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.197181391808907"/>
+      <inertia ixx="0.000180704361161813" ixy="1.07026638037563e-19" ixz="1.56735722682903e-10" iyy="0.000676905139492615" iyz="-8.22433526184444e-21" izz="0.000701571828521803"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l2_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="arm_l2_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l2_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_l3_link">
+    <inertial>
+      <origin xyz="0.154805576226277 -3.07037539647458e-17 0.00210076275486304" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.182379618165529"/>
+      <inertia ixx="0.000140464382352664" ixy="2.1435437078952e-19" ixz="1.68878152441465e-10" iyy="0.00062371110107317" iyz="-9.8151250050676e-21" izz="0.000644687237937217"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l3_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="arm_l3_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l3_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_l4_link">
+    <inertial>
+      <origin xyz="0.15125 3.40653404230178e-16 0.00206007053977714" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.131482025176648"/>
+      <inertia ixx="7.61244098718923e-05" ixy="9.69178609077501e-20" ixz="-4.66991036331849e-20" iyy="0.00051464101554282" iyz="6.30460018301958e-22" izz="0.000527876279377434"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l4_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="arm_l4_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/arm_l4_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_link">
+    <inertial>
+      <origin xyz="-0.00943224270685253 -2.24072505584934e-08 0.0350669907502222" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.228848612237181"/>
+      <inertia ixx="0.000122470482540944" ixy="-1.07472717309855e-10" ixz="1.16790939209657e-05" iyy="0.0001715213303575" iyz="-9.50304167649752e-11" izz="0.000141511317394913"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.501960784313725 0.501960784313725 0.501960784313725 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_yaw_link">
+    <inertial>
+      <origin xyz="-8.08039203326061e-08 -0.00772611704050977 -0.0363542792860382" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.217322026723881"/>
+      <inertia ixx="0.000154147840230305" ixy="7.53840930670252e-11" ixz="-2.58411913184479e-10" iyy="0.000122233038608625" iyz="-1.61976028021007e-05" izz="0.000116712065914663"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_yaw_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_yaw_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_yaw_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_pitch_link">
+    <inertial>
+      <origin xyz="0.00772611704078718 -0.0363542792869388 8.08039212485401e-08" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.217322026722233"/>
+      <inertia ixx="0.000122233038607208" ixy="1.61976028024354e-05" ixz="7.53832441103333e-11" iyy="0.000116712065911208" iyz="2.58412492763863e-10" izz="0.000154147840226459"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_pitch_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_pitch_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_pitch_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_roll_link">
+    <inertial>
+      <origin xyz="0.0125796209584655 0.00139059549833795 0.012231226279655" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0875518779599177"/>
+      <inertia ixx="7.36573009473639e-05" ixy="1.09648627072382e-11" ixz="3.93918627087477e-06" iyy="5.3109684066939e-05" iyz="2.53579489921485e-10" izz="2.50172844184434e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_roll_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_roll_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_roll_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_camera_link">
+    <inertial>
+      <origin xyz="-0.0121348322776446 0.0 0.00187096264569653" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0447759731526001"/>
+      <inertia ixx="1.60194001393268e-05" ixy="9.03146096735839e-22" ixz="9.91050471819132e-08" iyy="6.92267971098109e-06" iyz="-4.42031565006143e-22" izz="1.36285341071377e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/gripper_camera_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+    <collision name="gripper_camera_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/gripper_camera_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_stereo_camera_color_optical_frame">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <link name="gripper_right_camera_color_optical_frame">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <link name="gripper_left_camera_color_optical_frame">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <link name="tool_attachment_site_link">
+    <inertial>
+      <origin xyz="-0.00602037904153455 0.00139059549833791 0.012231226279655" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0875518779599177"/>
+      <inertia ixx="7.36573009473639e-05" ixy="1.09648627077354e-11" ixz="3.93918627087477e-06" iyy="5.3109684066939e-05" iyz="2.535794899228e-10" izz="2.50172844184434e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/tool_attachment_site_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="tool_attachment_site_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/tool_attachment_site_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_aruco_link">
+    <inertial>
+      <origin xyz="-8.97014059911272e-06 2.99075835115259e-06 -0.000313517411967557" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.000520487721584508"/>
+      <inertia ixx="3.834908442783e-08" ixy="-1.23630345809062e-14" ixz="1.34704395412487e-12" iyy="3.83685013633507e-08" iyz="-4.49121495198314e-13" izz="7.66888919510146e-08"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_aruco_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_aruco_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_aruco_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wrist_reflector_link">
+    <inertial>
+      <origin xyz="0.00377531872412057 -3.85556475255951e-12 0.00351760915937294" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00171618092746856"/>
+      <inertia ixx="1.51127728759546e-07" ixy="1.29437519397159e-17" ixz="-1.24862425165547e-09" iyy="1.64146246077095e-08" iyz="-2.00458419822811e-17" izz="1.47242352409892e-07"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_reflector_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="wrist_reflector_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wrist_reflector_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wheel_2_link">
+    <inertial>
+      <origin xyz="1.25476756894564e-05 5.22307168604463e-06 -0.000275017600766314" rpy="0.0 -0.0 0.0"/>
+      <mass value="6.0682081887272"/>
+      <inertia ixx="0.0154034644119385" ixy="-2.22604627484544e-06" ixz="5.21108774702054e-09" iyy="0.0154080256643557" iyz="5.27262855356307e-09" izz="0.029708346400951"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_2_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="wheel_2_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_2_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wheel_1_link">
+    <inertial>
+      <origin xyz="1.2547806012661e-05 5.22294298857529e-06 -0.00027501693981774" rpy="0.0 -0.0 0.0"/>
+      <mass value="6.06820810020002"/>
+      <inertia ixx="0.0154034651258547" ixy="-2.22604258305555e-06" ixz="5.22035462340732e-09" iyy="0.0154080256614685" iyz="5.28562094397411e-09" izz="0.0297083471319844"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_1_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="wheel_1_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_1_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="wheel_0_link">
+    <inertial>
+      <origin xyz="1.25474646742035e-05 5.22291550456022e-06 -0.000275016877356288" rpy="0.0 -0.0 0.0"/>
+      <mass value="6.06820808425982"/>
+      <inertia ixx="0.0154034651445229" ixy="-2.22601000971664e-06" ixz="5.20622353301233e-09" iyy="0.0154080256540422" iyz="5.28522507559181e-09" izz="0.0297083471441777"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_0_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="wheel_0_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/wheel_0_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="docking_contact_link">
+    <inertial>
+      <origin xyz="0.000438848617413434 -0.178577146715673 -0.0110316356083883" rpy="0.0 -0.0 0.0"/>
+      <mass value="18.9261039673325"/>
+      <inertia ixx="0.214992663147159" ixy="0.00083386140340347" ixz="-0.000588720101362879" iyy="0.22301041696344" iyz="-0.00155067556464412" izz="0.327845792807285"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/docking_contact_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="docking_contact_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_francis/meshes/docking_contact_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="quick_connect_interface_link">
+    <inertial>
+      <origin xyz="0.0460466663166456 5.63314975289596e-06 -0.00837500587558776" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.268266990446664"/>
+      <inertia ixx="0.000142502024751523" ixy="2.76289217435463e-09" ixz="-2.2350999156347e-05" iyy="0.000269733508018117" iyz="-8.22584379236226e-09" izz="0.000235102925220868"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/quick_connect_interface_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="quick_connect_interface_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/quick_connect_interface_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_finger_right_link">
+    <inertial>
+      <origin xyz="0.102874799750023 -0.019736351771456 3.17208639429561e-06" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0196451967584486"/>
+      <inertia ixx="7.66306924012396e-06" ixy="6.95117285138912e-06" ixz="-7.11107056420588e-10" iyy="5.78135538944762e-05" iyz="4.00009790922848e-09" izz="6.4920084445599e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_finger_right_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="gripper_finger_right_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_finger_right_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_fingertip_right_link">
+    <inertial>
+      <origin xyz="0.000475558534248993 0.00831957442804077 -0.000277041398299914" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0155505328279169"/>
+      <inertia ixx="2.74950777582773e-06" ixy="5.84692954757014e-08" ixz="5.92351921428346e-09" iyy="1.01134769547383e-06" iyz="7.19151436215247e-08" izz="2.1590127143644e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_fingertip_right_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="gripper_fingertip_right_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_fingertip_right_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="aruco_fingertip_right_link">
+    <inertial>
+      <origin xyz="-3.30439794460347e-06 -9.90743941896299e-06 -0.000211787813162015" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.000123521493853864"/>
+      <inertia ixx="3.33209068564967e-09" ixy="3.38901370003498e-15" ixz="7.62400928010461e-14" iyy="3.32883778612983e-09" iyz="2.28587510762354e-13" izz="6.65796010218536e-09"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/aruco_fingertip_right_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="aruco_fingertip_right_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/aruco_fingertip_right_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_finger_left_link">
+    <inertial>
+      <origin xyz="0.102874202935414 -0.0197363612660075 3.17208444257557e-06" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0196452088457426"/>
+      <inertia ixx="7.6629786672863e-06" ixy="6.95129198318871e-06" ixz="-7.11145811406909e-10" iyy="5.78117539744567e-05" iyz="4.0000972934487e-09" izz="6.49181938548344e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_finger_left_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1.0"/>
+      </material>
+    </visual>
+    <collision name="gripper_finger_left_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_finger_left_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gripper_fingertip_left_link">
+    <inertial>
+      <origin xyz="0.000475578204913674 -0.00831953155927476 -0.000277172441870529" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0155504911063414"/>
+      <inertia ixx="2.74950563756043e-06" ixy="-5.84687401960287e-08" ixz="5.90317654774139e-09" iyy="1.01134446589953e-06" iyz="-7.19175556308356e-08" izz="2.15901353046032e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_fingertip_left_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="gripper_fingertip_left_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/gripper_fingertip_left_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="aruco_fingertip_left_link">
+    <inertial>
+      <origin xyz="-3.30439794460347e-06 -9.90743941898381e-06 -0.000211787813162015" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.000123521493853863"/>
+      <inertia ixx="3.33209068564965e-09" ixy="3.3890136800534e-15" ixz="7.62400928023902e-14" iyy="3.32883778612979e-09" iyz="2.28587510762548e-13" izz="6.6579601021853e-09"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/aruco_fingertip_left_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision name="aruco_fingertip_left_collision_link">
+      <geometry>
+        <mesh filename="/home/hello-robot/repos/stretch4_dex_teleop/.venv/lib/python3.12/site-packages/stretch4_urdf/SE4_tools/eoa_wrist_dw4_tool_sg4/meshes/aruco_fingertip_left_collision_link.STL"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="grasp_center_link"/>
+  <link name="laser"/>
+  <link name="virtual_base"/>
+  <joint name="base_ref" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 0.027999995691835" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_5_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_5_link"/>
+    <origin xyz="0.0613832011662534 0.178318823151171 0.0527013981430276" rpy="0.0 0.453785605518531 1.04719755119659"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_5_optical_joint" type="fixed">
+    <parent link="line_sensor_5_link"/>
+    <child link="line_sensor_5_optical_link"/>
+    <origin xyz="0.00286000000000003 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_4_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_4_link"/>
+    <origin xyz="-0.0613832011662525 0.178318823151171 0.0527013981430276" rpy="0.0 0.45378560551853203 2.09439510239319"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_4_optical_joint" type="fixed">
+    <parent link="line_sensor_4_link"/>
+    <child link="line_sensor_4_optical_link"/>
+    <origin xyz="0.00286 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_3_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_3_link"/>
+    <origin xyz="-0.185120231404985 -0.036 0.0527013981430276" rpy="0.0 0.453785605518531 -3.14159265358979"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_3_optical_joint" type="fixed">
+    <parent link="line_sensor_3_link"/>
+    <child link="line_sensor_3_optical_link"/>
+    <origin xyz="0.00286 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_2_link"/>
+    <origin xyz="-0.123737030238733 -0.14231882315117 0.0527013981430276" rpy="0.0 0.45378560551853103 -2.0943951023932"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_2_optical_joint" type="fixed">
+    <parent link="line_sensor_2_link"/>
+    <child link="line_sensor_2_optical_link"/>
+    <origin xyz="0.00286 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_1_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_1_link"/>
+    <origin xyz="0.123737030238732 -0.142318823151171 0.0527013981430276" rpy="0.0 0.453785605518531 -1.0471975511966"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_1_optical_joint" type="fixed">
+    <parent link="line_sensor_1_link"/>
+    <child link="line_sensor_1_optical_link"/>
+    <origin xyz="0.00286 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_0_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="line_sensor_0_link"/>
+    <origin xyz="0.185120231404985 -0.0360000000000004 0.0527013981430276" rpy="0.0 0.453785605518531 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="line_sensor_0_optical_joint" type="fixed">
+    <parent link="line_sensor_0_link"/>
+    <child link="line_sensor_0_optical_link"/>
+    <origin xyz="0.00286000000000003 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="head_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="head_link"/>
+    <origin xyz="-0.0930000000000002 -0.0979999999999998 1.55900000430817" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="lidar_right_joint" type="fixed">
+    <parent link="head_link"/>
+    <child link="lidar_right_link"/>
+    <origin xyz="0.131744211811827 -0.0264137425448753 -0.0583279884119643" rpy="-3.05465659239941 0.781600065124168 2.39203005564319"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="lidar_left_joint" type="fixed">
+    <parent link="head_link"/>
+    <child link="lidar_left_link"/>
+    <origin xyz="0.131744211811846 0.222413742544858 -0.0583279884119634" rpy="-3.05465659239939 -0.781600065124167 0.7495625979465731"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_right_joint" type="fixed">
+    <parent link="head_link"/>
+    <child link="camera_right_link"/>
+    <origin xyz="0.171840602787894 0.0230000000000032 -0.0157566987072475" rpy="1.5707963267949 0.820304748437337 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_right_optical_joint" type="fixed">
+    <parent link="camera_right_link"/>
+    <child link="camera_right_optical_link"/>
+    <origin xyz="0.0212000000000001 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_left_joint" type="fixed">
+    <parent link="head_link"/>
+    <child link="camera_left_link"/>
+    <origin xyz="0.171840602787895 0.173 -0.0157566987072475" rpy="-1.5707963267949 0.820304748437337 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_left_optical_joint" type="fixed">
+    <parent link="camera_left_link"/>
+    <child link="camera_left_optical_link"/>
+    <origin xyz="0.0211999999999999 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_center_joint" type="fixed">
+    <parent link="head_link"/>
+    <child link="camera_center_link"/>
+    <origin xyz="0.177245603402412 0.0980000000000004 -0.0239069097938973" rpy="1.5707963267949 0.610865238198018 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="camera_center_optical_joint" type="fixed">
+    <parent link="camera_center_link"/>
+    <child link="camera_center_optical_link"/>
+    <origin xyz="0.00170000000000003 0.0 0.0" rpy="-1.5707963267949 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="mast_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="mast_link"/>
+    <origin xyz="-0.0930000000000002 -0.0979999999999998 0.00400000430816486" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="lift_joint" type="prismatic">
+    <parent link="mast_link"/>
+    <child link="lift_link"/>
+    <origin xyz="0.0 -0.00140000000000005 0.241" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.2"/>
+  </joint>
+  <joint name="arm_l0_joint" type="fixed">
+    <parent link="lift_link"/>
+    <child link="arm_l0_link"/>
+    <origin xyz="0.01675 0.0994000000000002 -0.0128595489452177" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="arm_l1_joint" type="fixed">
+    <parent link="arm_l0_link"/>
+    <child link="arm_l1_link"/>
+    <origin xyz="-0.01375 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.13"/>
+  </joint>
+  <joint name="arm_l2_joint" type="fixed">
+    <parent link="arm_l1_link"/>
+    <child link="arm_l2_link"/>
+    <origin xyz="-0.0135000000000001 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.13"/>
+  </joint>
+  <joint name="arm_l3_joint" type="fixed">
+    <parent link="arm_l2_link"/>
+    <child link="arm_l3_link"/>
+    <origin xyz="-0.0135 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.13"/>
+  </joint>
+  <joint name="arm_l4_joint" type="prismatic">
+    <parent link="arm_l0_link"/>
+    <child link="arm_l4_link"/>
+    <origin xyz="-0.0055000000000001 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.52"/>
+  </joint>
+  <joint name="wrist_joint" type="fixed">
+    <parent link="arm_l4_link"/>
+    <child link="wrist_link"/>
+    <origin xyz="0.2934 0.0 -0.03672" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="wrist_yaw_joint" type="fixed">
+    <parent link="wrist_link"/>
+    <child link="wrist_yaw_link"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="0.0" velocity="0.0" lower="-1.135" upper="4.276"/>
+  </joint>
+  <joint name="wrist_pitch_joint" type="fixed">
+    <parent link="wrist_yaw_link"/>
+    <child link="wrist_pitch_link"/>
+    <origin xyz="0.0 -0.04222 -0.0452" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="-1.135" upper="4.276"/>
+  </joint>
+  <joint name="wrist_roll_joint" type="fixed">
+    <parent link="wrist_pitch_link"/>
+    <child link="wrist_roll_link"/>
+    <origin xyz="0.0422200000000001 -0.0451999999999999 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="0.0" velocity="0.0" lower="-4.276" upper="1.135"/>
+  </joint>
+  <joint name="gripper_camera_joint" type="fixed">
+    <parent link="wrist_roll_link"/>
+    <child link="gripper_camera_link"/>
+    <origin xyz="0.0192000000000001 0.0 0.057" rpy="0.0 0.0523598775598298 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="gripper_stereo_camera_color_optical_joint" type="fixed">
+    <parent link="gripper_camera_link"/>
+    <child link="gripper_stereo_camera_color_optical_frame"/>
+    <origin xyz="0.0 0.0 0.0" rpy="-1.51843644923507 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="gripper_right_camera_color_optical_joint" type="fixed">
+    <parent link="gripper_camera_link"/>
+    <child link="gripper_right_camera_color_optical_frame"/>
+    <origin xyz="0.0 -0.01 0.0" rpy="-1.51843644923507 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="gripper_left_camera_color_optical_joint" type="fixed">
+    <parent link="gripper_camera_link"/>
+    <child link="gripper_left_camera_color_optical_frame"/>
+    <origin xyz="0.0 0.01 0.0" rpy="-1.51843644923507 -0.0 -1.5707963267949"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="tool_attachment_site_joint" type="fixed">
+    <parent link="wrist_roll_link"/>
+    <child link="tool_attachment_site_link"/>
+    <origin xyz="0.0186 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="wrist_aruco_joint" type="fixed">
+    <parent link="wrist_link"/>
+    <child link="wrist_aruco_link"/>
+    <origin xyz="-0.00867000000000001 0.0 0.0681104510547822" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="wrist_reflector_joint" type="fixed">
+    <parent link="wrist_link"/>
+    <child link="wrist_reflector_link"/>
+    <origin xyz="0.00665000000000002 0.0 0.0677604510547822" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="wheel_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_2_link"/>
+    <origin xyz="0.0 -0.174 0.0720000043081651" rpy="-1.5707963267949 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <joint name="wheel_1_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_1_link"/>
+    <origin xyz="-0.150688420258493 0.087000000000001 0.072000004308165" rpy="-1.5707963267949 -0.0 -2.09439510239321"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <joint name="wheel_0_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_0_link"/>
+    <origin xyz="0.150688420258492 0.0869999999999999 0.072000004308165" rpy="-1.5707963267949 -0.0 2.09439510239319"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+  <joint name="docking_contact_frame" type="fixed">
+    <parent link="base_link"/>
+    <child link="docking_contact_link"/>
+    <origin xyz="0.0 0.1768 0.107500004308165" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="gripper_finger_right_joint" type="fixed">
+    <parent link="quick_connect_interface_link"/>
+    <child link="gripper_finger_right_link"/>
+    <origin xyz="0.0377995041255281 -0.0221213818384166 0.0" rpy="3.14159265358979 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.5"/>
+  </joint>
+  <joint name="gripper_fingertip_right_joint" type="fixed">
+    <parent link="gripper_finger_right_link"/>
+    <child link="gripper_fingertip_right_link"/>
+    <origin xyz="0.191008332164326 -0.0221679999883885 0.0" rpy="3.14159265358979 -0.0 -1.29154364647579"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="aruco_fingertip_right_joint" type="fixed">
+    <parent link="gripper_fingertip_right_link"/>
+    <child link="aruco_fingertip_right_link"/>
+    <origin xyz="-0.00441710992520835 0.0320457043432331 0.0" rpy="1.37881010907552 -0.0 2.44346095279206"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="gripper_finger_left_joint" type="fixed">
+    <parent link="quick_connect_interface_link"/>
+    <child link="gripper_finger_left_link"/>
+    <origin xyz="0.0378 0.022121 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="0.0" velocity="0.0" lower="0.0" upper="0.5"/>
+  </joint>
+  <joint name="gripper_fingertip_left_joint" type="fixed">
+    <parent link="gripper_finger_left_link"/>
+    <child link="gripper_fingertip_left_link"/>
+    <origin xyz="0.191008332164325 -0.0221679999883927 0.0" rpy="0.0 -0.0 -1.29154364647581"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="aruco_fingertip_left_joint" type="fixed">
+    <parent link="gripper_fingertip_left_link"/>
+    <child link="aruco_fingertip_left_link"/>
+    <origin xyz="-0.00441710992520833 -0.0320457043432331 0.0" rpy="1.37881010907552 -0.0 0.698131700797736"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="grasp_center_joint" type="fixed">
+    <parent link="quick_connect_interface_link"/>
+    <child link="grasp_center_link"/>
+    <origin xyz="0.23496234568483 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="tool_connection_joint" type="fixed">
+    <parent link="tool_attachment_site_link"/>
+    <child link="quick_connect_interface_link"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <axis xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="mobile_base_rotation_joint" type="revolute">
+    <parent link="virtual_base"/>
+    <child link="base_footprint"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="1" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+</robot>

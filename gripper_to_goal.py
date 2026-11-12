@@ -142,7 +142,14 @@ class GripperToGoal:
             return None, rotated
         return 1000.0 * translated / rotated, rotated
 
-    def __init__(self, robot_speed, starting_configuration, robot_allowed_to_move):
+    def __init__(self, robot_speed, starting_configuration, robot_allowed_to_move, robot=None):
+        # robot: an already started robot to drive instead of starting one.
+        # The caller then owns it - GripperToGoal will not stop it - and must
+        # set dex_teleop_parameters.use_robot_client to match its type
+        # (RobotClient or Robot). Set first so __del__ is safe even if the
+        # constructor fails part way.
+        self._owns_robot = robot is None
+
         # The gripper joint is added once the fitted tool is known, below.
         self.joints_allowed_to_move = ['arm_l4_joint', 'lift_joint', 'wrist_yaw_joint', 'wrist_pitch_joint', 'wrist_roll_joint', 'joint_mobile_base_rotate_by']
 
@@ -230,7 +237,7 @@ class GripperToGoal:
         # Prepare the robot last to avoid errors due to blocking calls
         # associated with other aspects of setting things up, such as
         # initializing SimpleIK.
-        self.robot = rm.start_robot()
+        self.robot = rm.start_robot() if robot is None else robot
 
         # The grip width from the tongs is 0.0 (closed) to 1.0 (open). Map it
         # onto whatever the fitted gripper actually accepts, rather than a
@@ -327,6 +334,9 @@ class GripperToGoal:
         # by which point builtins the stop path needs are already gone. There
         # is nothing useful to do then, and the traceback only obscures
         # whatever actually ended the run.
+        # A robot passed in to the constructor belongs to the caller.
+        if not getattr(self, '_owns_robot', True):
+            return
         try:
             print('GripperToGoal.__del__: stopping the robot')
             self.robot.stop()

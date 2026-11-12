@@ -22,6 +22,7 @@
 # dual licensing, please contact Hello Robot Inc.
 ###########################################################################
 
+import errno
 import time
 import math
 import numpy as np
@@ -131,8 +132,12 @@ class SimpleIK:
             #self.rotary_urdf_file_name = './stretch_base_rotation_ik_with_fixed_wrist.urdf'
             #self.prismatic_urdf_file_name = './stretch_base_translation_ik_with_fixed_wrist.urdf'
             
-            self.rotary_urdf_file_name = './stretch4_dex_teleop_base_rotation_ik_with_fixed_wrist.urdf'
-            self.prismatic_urdf_file_name = './stretch4_dex_teleop_base_translation_ik_with_fixed_wrist.urdf'
+            # Resolve against this file's directory rather than the current
+            # working directory, so SimpleIK can be constructed from anywhere
+            # (for example when this repository is used as a submodule).
+            urdf_dir = os.path.dirname(os.path.abspath(__file__))
+            self.rotary_urdf_file_name = os.path.join(urdf_dir, 'stretch4_dex_teleop_base_rotation_ik_with_fixed_wrist.urdf')
+            self.prismatic_urdf_file_name = os.path.join(urdf_dir, 'stretch4_dex_teleop_base_translation_ik_with_fixed_wrist.urdf')
 
             self.rotary_urdf = load_urdf(self.rotary_urdf_file_name)
             self.prismatic_urdf = load_urdf(self.prismatic_urdf_file_name)

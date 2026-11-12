@@ -6,6 +6,7 @@ from functools import partial
 from scipy.spatial.transform import Rotation
 from stretch4_body.core.robot_params import RobotParams
 import urchin as urdf_loader
+import errno
 import os
 from collections import deque
 import simple_ik as si

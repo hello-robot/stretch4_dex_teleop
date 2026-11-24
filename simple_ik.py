@@ -36,7 +36,7 @@ def load_urdf(file_name):
     if not os.path.isfile(file_name):
         print()
         print('*****************************')
-        print('ERROR: ' + file_name + ' was not found. OptasIK requires a specialized URDF saved with this file name. prepare_base_rotation_ik_urdf.py can be used to generate this specialized URDF.')
+        print('ERROR: ' + file_name + ' was not found. Dex Teleop requires a specialized URDF saved with this file name. Run generate_ik_urdfs.py to generate it.')
         print('*****************************')
         print()
         raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), file_name)

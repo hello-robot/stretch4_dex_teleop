@@ -2,3 +2,4 @@
 __pycache__/
 webcam_calibration_images/
 webcam_aruco_calibration_board.png
+stretch4_dex_teleop_base_*_ik_with_fixed_wrist.urdf
